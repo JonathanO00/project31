@@ -1,0 +1,12 @@
+#start, #farm, #settings {
+    text-align: center;
+    font-size: 5vh;
+    border: 1px solid black;
+    width: 40vw;
+    margin: 0 auto;
+}
+
+#studyfarm {
+    font-size: 10vh;
+    text-align: center;
+}
