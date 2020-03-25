@@ -1,0 +1,19 @@
+h3 {
+    text-align: center;
+    font-size: 8vh;
+}
+
+p {
+    font-size: 3vh;
+    margin-right: 7vw;
+}
+
+input {
+    width: 10vw;
+}
+
+#settingsDiv {
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 30vw;
+}
