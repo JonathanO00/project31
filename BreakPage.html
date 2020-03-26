@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>StudyFarm</title>
+        <link rel="stylesheet" href="style/BreakStyle.css">
+    </head>
+
+    <body>
+        <h3>Set your Breaks</h3>
+
+        <div id="breakDiv">
+            <table>
+                <tr>
+                    <td><p>Break length:</p></td>
+                    <td><input type="text" id="bLength"> minutes</td>
+                </tr>
+                <tr>
+                    <td><p>Break interval:</p></td>
+                    <td><input type="text" id="bInterval"> minutes</td>
+                </tr>
+                <tr>
+                    <div id="exampleDiv">
+                    <td><p id="example"></p></td>
+                    </div>
+                </tr>
+                <tr>
+                    <td><button type="button" id="save">Help</button></td>
+                    <td><button type="button" id="startTimer" onclick="location.href='main.html'">Start!</button></td>
+                </tr>
+            </table>
+
+            <script src="scripts/breakScript.js"></script>
+    </body>
+</html>
