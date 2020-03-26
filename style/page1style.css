@@ -1,5 +1,6 @@
 h2 {
   text-align : center;
+  font-size: 10vh;
 }
 
 .back {
@@ -18,6 +19,9 @@ a:hover {
   background-color: #ddd;
   color: black;
 }
+div {
+  text-align: center;
+}
 
 .button {
   background-color: white;
@@ -31,8 +35,9 @@ a:hover {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  height:150px;
-  width:150px;
+  height: 150px;
+  width: 150px;
+  
 }
 
 .button:hover {
