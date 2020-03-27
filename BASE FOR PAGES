@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>StudyFarm</title>
@@ -22,7 +21,7 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <link rel="stylesheet" href="style/MainMenuStyle.css">
+    <link rel="stylesheet" href="styles/style.css">
 
 </head>
 
@@ -30,18 +29,7 @@
     <!------------------->
     <!--  HTML Section -->
     <!------------------->
-    <div id="studyfarm">
-        <p>StudyFarm</p>
-    </div>
-    <div id="start">
-        <p>Start</p>
-    </div>
-    <div id="farm">
-        <p>My Farm</p>
-    </div>
-    <div id="settings">
-        <p>Settings</p>
-    </div>
+   
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, other API's    -->
