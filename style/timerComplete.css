@@ -1,0 +1,31 @@
+h3 {
+    font-size: 8vh;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+}
+
+#headDiv {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#bottomDiv {
+    font-size: 4vh;
+    position: absolute;
+    top: 80vh;
+    left: 35vw;
+    text-align: center;
+    width: 30vw;
+}
+
+#buttonDiv {
+    position: absolute;
+    top: 90vh;
+    left: 38vw;
+    text-align: center;
+    width: 20vw;
+    height: 7vh;
+}
