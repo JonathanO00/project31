@@ -1,11 +1,11 @@
 body {
-    background-color: #177D2d;
+    background-color: palegreen;;
 }
 
 .button {
     width: 100%;
     height: 100%;
-    background-color: orange;
+    background-color: peachpuff;
     color: black;
     display: block;
     font-size: 6vh;
@@ -14,7 +14,7 @@ body {
 }
 
 .button:hover {
-    background-color: darkorange;
+    background-color: orange;
     color: white;
 }
 
