@@ -1,7 +1,7 @@
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 120;
 const ALERT_THRESHOLD = 60;
-
+const beep = document.getElementById("beep");
 
 const COLOR_CODES = {
   info: {
@@ -71,6 +71,7 @@ function startTimer() {
 
     if (timeLeft === 0) {
       onTimesUp();
+      beep.play();
     }
   }, 1000);
 }
@@ -86,6 +87,7 @@ function startBreak() {
 
     if (breakLeft === 0) {
       onTimesUp();
+      beep.play();
       //add funtion here that will create a button that will restart the timer once its clicked.
     }
   }, 1000);
