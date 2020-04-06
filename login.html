@@ -84,7 +84,11 @@
                     if (authResult.additionalUserInfo.isNewUser) {
                         db.collection("users").doc(user.uid).set({
                                 name: user.displayName,
-                                email: user.email
+                                email: user.email,
+                                soundvolume: 100,
+                                musicvolume: 100,
+                                breaklength: 5,
+                                breakinterval: 30
                             }).then(function () {
                                 console.log("New user added to firestore");
                                 window.location.assign("main.html");
