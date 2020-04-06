@@ -9,7 +9,7 @@ function addToFarm() {
     firebase.auth().onAuthStateChanged(function (user) {
             db.collection("users").doc(user.uid)
                 .collection("animals")
-                .add(animalobj); //ugly ID auto generated for the animal
+                .add(animalobj);
         })
         .then(function () {
             console.log("Document successfully written!");
@@ -19,5 +19,7 @@ function addToFarm() {
         });
 }
 
-//document.getElementById("addToFarm").onclick = addToFarm;
-document.getElementById("addToFarm").onclick = "location.href='myfarm.html'";
+document.getElementById("addToFarm").onclick = addToFarm;
+document.getElementById("addToFarm").onclick = function() {
+    location.href='myfarm.html'
+};
