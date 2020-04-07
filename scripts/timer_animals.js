@@ -1,7 +1,6 @@
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 120;
 const ALERT_THRESHOLD = 60;
-const beep = document.getElementById("beep");
 
 const COLOR_CODES = {
   info: {
@@ -26,6 +25,7 @@ let timeLeft = TIME_LIMIT;
 let breakLeft = BREAK_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
+let beep = document.getElementById("beep");
 
 document.getElementById("app").innerHTML = `
 <div class="base-timer">

@@ -1,25 +1,27 @@
 function addToFarm() {
-    let animalName = document.getElementById("animalName").value;
+    document.getElementById("addToFarm").addEventListener("click", function () {
+        let animalName = document.getElementById("animalName").value;
 
-    let animalObj = {
-        animal: "pig",
-        name: animalName
-    }
+        let animalObj = {
+            animal: "pig",
+            name: animalName
+        }
 
-    firebase.auth().onAuthStateChanged(function (user) {
-            db.collection("users").doc(user.uid)
-                .collection("animals")
-                .add(animalobj);
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                console.log(user);
+                db.collection("users").doc(user.uid)
+                    .collection("animals")
+                    .add(animalObj);
+            } else {
+                alert("You aren't signed in. How????");
+            }
         })
-        .then(function () {
-            console.log("Document successfully written!");
-        })
-        .catch(function (error) {
-            console.error("Error writing document: ", error);
-        });
+    })
 }
 
-document.getElementById("addToFarm").onclick = addToFarm;
-document.getElementById("addToFarm").onclick = function() {
-    location.href='myfarm.html'
-};
+/*document.getElementById("addToFarm").onclick = function () {
+    location.href = 'myfarm.html'
+};*/
+
+addToFarm();
