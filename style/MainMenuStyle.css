@@ -5,6 +5,7 @@ body {
 .button {
     width: 100%;
     height: 100%;
+    border: 2px solid black;
     background-color: gold;
     color: black;
     display: block;
@@ -21,7 +22,6 @@ body {
 .div {
     text-align: center;
     font-size: 5vh;
-    border: 2px solid black;
     width: 45vw;
     height: 15vh;
     margin: 20px auto;
@@ -50,5 +50,4 @@ body {
     font-size: 2vh;
     text-align: center;
     margin: 20px auto;
-    border: 2px solid black;
 }
