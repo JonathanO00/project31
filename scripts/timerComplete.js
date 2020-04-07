@@ -9,7 +9,7 @@ function addToFarm() {
 
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
-                console.log(user);
+                console.log(user.displayName);
                 db.collection("users").doc(user.uid)
                     .collection("animals")
                     .add(animalObj);
