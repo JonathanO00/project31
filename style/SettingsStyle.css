@@ -26,3 +26,15 @@ input {
 td {
     text-align: center;
 }
+
+#myform {
+    margin-left: auto;
+    margin-right: auto;
+    text-align : center;
+}
+
+#goback {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
