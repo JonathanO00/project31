@@ -197,6 +197,7 @@ let backB = document.getElementById("back");
 
 
 chickenB.onclick = function () {
+    document.getElementById("header2").style.display="none";
     setTimeout(startBreak, TIMER_MS);
     startTimer();
     document.getElementById("page1").style.display="none";
@@ -209,6 +210,7 @@ chickenB.onclick = function () {
 }
 
 pigB.onclick = function () {
+    document.getElementById("header2").style.display="none";
     setTimeout(startBreak, TIMER_MS);
     startTimer();
     document.getElementById("page1").style.display="none";
@@ -220,6 +222,7 @@ pigB.onclick = function () {
 }
 
 cowB.onclick = function () {
+    document.getElementById("header2").style.display="none";
     setTimeout(startBreak, TIMER_MS);
     startTimer();
     document.getElementById("page1").style.display="none";
@@ -231,6 +234,7 @@ cowB.onclick = function () {
 }
 
 horseB.onclick = function () {
+    document.getElementById("header2").style.display="none";
     setTimeout(startBreak, TIMER_MS);
     startTimer();
     document.getElementById("page1").style.display="none";
@@ -242,6 +246,7 @@ horseB.onclick = function () {
 }
 
 sheepB.onclick = function () {
+    document.getElementById("header2").style.display="none";
     setTimeout(startBreak, TIMER_MS);
     startTimer();
     document.getElementById("page1").style.display="none";
@@ -253,6 +258,7 @@ sheepB.onclick = function () {
 }
 
 dogB.onclick = function () {
+    document.getElementById("header2").style.display="none";
     setTimeout(startBreak, TIMER_MS);
     startTimer();
     document.getElementById("page1").style.display="none";
