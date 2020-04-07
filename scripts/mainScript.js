@@ -7,7 +7,7 @@ let logoutButton = document.getElementById("logout");
 
 //Redirecting functions for different pages.
 start.onclick = function () {
-    location.href = 'chooseAnimal.html'
+    location.href = 'choose.html'
 }
 
 farm.onclick = function () {

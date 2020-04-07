@@ -16,9 +16,9 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 1200; // 20 min
+const TIME_LIMIT = 1500; // 25 min
 const BREAK_LIMIT = 300; // 5 min
-const TIMER_MS = 1201100; // 20 min 1.1 second
+const TIMER_MS = 1501100; // 25 min 1.1 second
 const BREAK_MS = 301000; // 5 min 1 second
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
