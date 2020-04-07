@@ -85,7 +85,7 @@ function startBreak() {
       beep.play();
       //add funtion here that will create a button that will restart the timer once its clicked.
       document.getElementById("secondRound").style.display="block";
-
+      timeLeft = TIME_LIMIT;
     }
   }, 1000);
 }
