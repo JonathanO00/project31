@@ -3,13 +3,12 @@ function addToFarm() {
         let animalName = document.getElementById("animalName").value;
 
         let animalObj = {
-            animal: "pig",
+            animal: sessionStorage.getItem("animal"),
             name: animalName
         }
 
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
-                console.log(user.displayName);
                 db.collection("users").doc(user.uid)
                     .collection("animals")
                     .add(animalObj);
@@ -20,8 +19,10 @@ function addToFarm() {
     })
 }
 
-/*document.getElementById("addToFarm").onclick = function () {
-    location.href = 'myfarm.html'
-};*/
-
 addToFarm();
+
+document.getElementById("farmDirect").onclick = function () {
+    setTimeout(function () {
+        location.href = 'myfarm.html'
+    }, 10);
+};

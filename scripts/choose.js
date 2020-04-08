@@ -84,7 +84,7 @@ function startBreak() {
       onTimesUp();
       beep.play();
       //add funtion here that will create a button that will restart the timer once its clicked.
-      document.getElementById("secondRound").style.display="block";
+      document.getElementById("secondRound").style.display = "block";
       timeLeft = TIME_LIMIT;
     }
   }, 1000);
@@ -102,7 +102,11 @@ function formatTime(time) {
 }
 
 function setRemainingPathColor(timeLeft) {
-  const { alert, warning, info } = COLOR_CODES;
+  const {
+    alert,
+    warning,
+    info
+  } = COLOR_CODES;
   if (timeLeft <= alert.threshold) {
     document
       .getElementById("base-timer-path-remaining")
@@ -149,29 +153,29 @@ function setCircleDasharray2() {
 }
 
 document.getElementById("secondRound").onclick = function () {
-    timepassed = 0;
-    roundTwo();
+  timePassed = 0;
+  timeLeft = TIME_LIMIT;
+  roundTwo();
 }
 //second round
 function roundTwo() {
-    timerInterval = setInterval(() => {
-      timePassed = timePassed += 1;
-      timeLeft = TIME_LIMIT - timePassed;
-      document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
-      setCircleDasharray();
-      setRemainingPathColor(timeLeft);
-  
-      if (timeLeft === 0) {
-        onTimesUp();
-        beep.play();
-        document.getElementById("saveFarm").style.display="block";
-      }
-    }, 1000);
-  }
+  timerInterval = setInterval(() => {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+      beep.play();
+      document.getElementById("saveFarm").style.display = "block";
+    }
+  }, 1000);
+}
 
 document.getElementById("saveFarm").onclick = function () {
-    //need to make this part upload data to firebase
-    location.href = "main.html";
+  location.href = "timerComplete.html";
 }
 
 /************************************************************************** 
@@ -179,13 +183,6 @@ document.getElementById("saveFarm").onclick = function () {
     just pull the data from firebase and use a constructor to instantiate
     the data
 ***************************************************************************/
-let chicken = 0;
-let pig = 0;
-let cow = 0;
-let horse = 0;
-let sheep = 0;
-let dog = 0;
-
 
 let chickenB = document.getElementById("chicken");
 let pigB = document.getElementById("pig");
@@ -195,80 +192,91 @@ let sheepB = document.getElementById("sheep");
 let dogB = document.getElementById("dog");
 let backB = document.getElementById("back");
 
+function Animal(type) {
+  this.type = type;
+}
 
 chickenB.onclick = function () {
-    document.getElementById("header2").style.display="none";
-    setTimeout(startBreak, TIMER_MS);
-    startTimer();
-    document.getElementById("page1").style.display="none";
-    document.getElementById("animal").src="images/chicken.png"
-    document.getElementById("animal").style.display="block";
-    document.getElementById("app").style.display="block";
-    document.getElementById("backButton").style.display="block";
-    chicken++;
+  document.getElementById("header2").style.display = "none";
+  setTimeout(startBreak, TIMER_MS);
+  startTimer();
+  document.getElementById("page1").style.display = "none";
+  document.getElementById("animal").src = "images/chicken.png"
+  document.getElementById("animal").style.display = "block";
+  document.getElementById("app").style.display = "block";
+  document.getElementById("backButton").style.display = "block";
+  let newAnimal = new Animal("chicken");
+  sessionStorage.setItem("animal", newAnimal.type);
 
 }
 
 pigB.onclick = function () {
-    document.getElementById("header2").style.display="none";
-    setTimeout(startBreak, TIMER_MS);
-    startTimer();
-    document.getElementById("page1").style.display="none";
-    document.getElementById("animal").src="images/pig.png"
-    document.getElementById("animal").style.display="block";
-    document.getElementById("app").style.display="block";
-    document.getElementById("backButton").style.display="block";
-    pig++;
+  document.getElementById("header2").style.display = "none";
+  setTimeout(startBreak, TIMER_MS);
+  startTimer();
+  document.getElementById("page1").style.display = "none";
+  document.getElementById("animal").src = "images/pig.png"
+  document.getElementById("animal").style.display = "block";
+  document.getElementById("app").style.display = "block";
+  document.getElementById("backButton").style.display = "block";
+  let newAnimal = new Animal("pig");
+  sessionStorage.setItem("animal", newAnimal.type);
 }
 
 cowB.onclick = function () {
-    document.getElementById("header2").style.display="none";
-    setTimeout(startBreak, TIMER_MS);
-    startTimer();
-    document.getElementById("page1").style.display="none";
-    document.getElementById("animal").src="images/cow.png"
-    document.getElementById("animal").style.display="block";
-    document.getElementById("app").style.display="block";
-    document.getElementById("backButton").style.display="block";
-    cow++;
+  document.getElementById("header2").style.display = "none";
+  setTimeout(startBreak, TIMER_MS);
+  startTimer();
+  document.getElementById("page1").style.display = "none";
+  document.getElementById("animal").src = "images/cow.png"
+  document.getElementById("animal").style.display = "block";
+  document.getElementById("app").style.display = "block";
+  document.getElementById("backButton").style.display = "block";
+  let newAnimal = new Animal("cow");
+  sessionStorage.setItem("animal", newAnimal.type);
 }
 
 horseB.onclick = function () {
-    document.getElementById("header2").style.display="none";
-    setTimeout(startBreak, TIMER_MS);
-    startTimer();
-    document.getElementById("page1").style.display="none";
-    document.getElementById("animal").src="images/horse.png"
-    document.getElementById("animal").style.display="block";
-    document.getElementById("app").style.display="block";
-    document.getElementById("backButton").style.display="block";
-    horse++;
+  document.getElementById("header2").style.display = "none";
+  setTimeout(startBreak, TIMER_MS);
+  startTimer();
+  document.getElementById("page1").style.display = "none";
+  document.getElementById("animal").src = "images/horse.png"
+  document.getElementById("animal").style.display = "block";
+  document.getElementById("app").style.display = "block";
+  document.getElementById("backButton").style.display = "block";
+  let newAnimal = new Animal("horse");
+  sessionStorage.setItem("animal", newAnimal.type);
 }
 
 sheepB.onclick = function () {
-    document.getElementById("header2").style.display="none";
-    setTimeout(startBreak, TIMER_MS);
-    startTimer();
-    document.getElementById("page1").style.display="none";
-    document.getElementById("animal").src="images/sheep.png"
-    document.getElementById("animal").style.display="block";
-    document.getElementById("app").style.display="block";
-    document.getElementById("backButton").style.display="block";
-    sheep++;
+  document.getElementById("header2").style.display = "none";
+  setTimeout(startBreak, TIMER_MS);
+  startTimer();
+  document.getElementById("page1").style.display = "none";
+  document.getElementById("animal").src = "images/sheep.png"
+  document.getElementById("animal").style.display = "block";
+  document.getElementById("app").style.display = "block";
+  document.getElementById("backButton").style.display = "block";
+  let newAnimal = new Animal("sheep");
+  sessionStorage.setItem("animal", newAnimal.type);
+
 }
 
 dogB.onclick = function () {
-    document.getElementById("header2").style.display="none";
-    setTimeout(startBreak, TIMER_MS);
-    startTimer();
-    document.getElementById("page1").style.display="none";
-    document.getElementById("animal").src="images/dog.png"
-    document.getElementById("animal").style.display="block";
-    document.getElementById("app").style.display="block";
-    document.getElementById("backButton").style.display="block";
-    dog++;
+  document.getElementById("header2").style.display = "none";
+  setTimeout(startBreak, TIMER_MS);
+  startTimer();
+  document.getElementById("page1").style.display = "none";
+  document.getElementById("animal").src = "images/dog.png"
+  document.getElementById("animal").style.display = "block";
+  document.getElementById("app").style.display = "block";
+  document.getElementById("backButton").style.display = "block";
+  let newAnimal = new Animal("dog");
+  sessionStorage.setItem("animal", newAnimal.type);
+
 }
 
 backB.onclick = function () {
-    location.href = "main.html";
+  location.href = "main.html";
 }
