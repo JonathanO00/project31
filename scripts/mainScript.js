@@ -26,6 +26,11 @@ logoutButton.onclick = function() {
     firebase.auth().signOut();
 }
 
+function popUp() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+
 //Display greeting if signed in, otherwise display login / signup button.
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
