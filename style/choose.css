@@ -16,7 +16,22 @@ div {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 6vh;
+    margin: 8px 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    height: 18vh;
+    width: 25vw;
+}
+
+.button1 {
+    background-color: gold;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 3vh;
     margin: 8px 4px;
     transition-duration: 0.4s;
     cursor: pointer;

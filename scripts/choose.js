@@ -159,6 +159,7 @@ document.getElementById("secondRound").onclick = function () {
 }
 //second round
 function roundTwo() {
+  document.getElementById("secondRound").style.display = "none";
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
