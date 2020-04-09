@@ -12,7 +12,7 @@ function displayfarm() {
     var table = document.createElement("table");
     var table2 = document.createElement("table");
     table.id = "farm";
-    table2.id="label";
+    table2.id = "label";
 
     firebase.auth().onAuthStateChanged(function (user) {
 
@@ -63,7 +63,7 @@ function displayfarm() {
                     table.appendChild(tr);
                 }
             })
-            document.body.appendChild(table2);
+        document.body.appendChild(table2);
         document.body.appendChild(table);
     })
 }
