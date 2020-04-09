@@ -1,28 +1,18 @@
 let back = document.getElementById("back");
 
 back.onclick = function () {
-    location.href = "main.html";
-}
-
-window.onload = function () {
-    resize();
+    location.href = "index.html";
 }
 
 //holds all animal objects.
 let farm = [];
 
-//Sorting method (incomplete)
-/**function compare(a, b) {
-    const scoreA = a.score;
-    const scoreB = b.score;
-
-    return scoreB - scoreA;
-} */
-
 //retrieves animal objects
 function displayfarm() {
     var table = document.createElement("table");
+    var table2 = document.createElement("table");
     table.id = "farm";
+    table2.id="label";
 
     firebase.auth().onAuthStateChanged(function (user) {
 
@@ -33,7 +23,6 @@ function displayfarm() {
 
                 });
             }).then(function () {
-                //sort function right here???
 
                 var tr = document.createElement('tr');
                 tr.id = "row1";
@@ -51,7 +40,7 @@ function displayfarm() {
 
                 tr.appendChild(td1);
                 tr.appendChild(td2);
-                table.appendChild(tr);
+                table2.appendChild(tr);
 
                 for (let i = 0; i < farm.length; i++) {
 
@@ -74,19 +63,8 @@ function displayfarm() {
                     table.appendChild(tr);
                 }
             })
+            document.body.appendChild(table2);
         document.body.appendChild(table);
     })
 }
 displayfarm();
-
-
-// window.onload = resize;
-window.onresize = resize;
-
-function resize() {
-    if (window.innerWidth < 400) {
-        document.getElementById("back").style.width = "96vw";
-    } else {
-        document.getElementById("back").style.width = "25mm";
-    }
-}
