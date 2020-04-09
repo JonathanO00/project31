@@ -279,5 +279,5 @@ dogB.onclick = function () {
 }
 
 backB.onclick = function () {
-  location.href = "main.html";
+  location.href = "index.html";
 }
